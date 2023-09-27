@@ -14,7 +14,7 @@ export default function handleProfileSignup(
     value.forEach((res) => {
       result.push({
         status: res.status,
-        value: res.value ? res.value : res.reason,
+        value: res.value ? res.value : res.reason.message,
       });
     });
     return result;

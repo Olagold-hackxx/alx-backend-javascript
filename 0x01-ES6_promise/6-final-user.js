@@ -10,12 +10,12 @@ export default function handleProfileSignup(
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ];
-  return Promise.all(promises).then((value) => {
+  return Promise.allSettled(promises).then((value) => {
     const result = [];
     value.forEach((res) => {
       result.push({
         status: res.status,
-        value: res.value ? res.value : res.reason,
+        value: res.value ? res.value : `${res.reason.name}: ${res.reason.message}`,
       });
     });
     return result;

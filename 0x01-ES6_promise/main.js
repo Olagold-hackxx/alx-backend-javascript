@@ -1,7 +1,8 @@
-import handleProfileSignup from './6-final-user';
+import asyncUploadUser from './100-await';
 
 const test = async () => {
-  console.log(await handleProfileSignup('Bob', 'Dylan', 'bob_dylan.jpg'));
+  const value = await asyncUploadUser();
+  console.log(value);
 };
 
 test();

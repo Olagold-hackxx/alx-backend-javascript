@@ -5,13 +5,13 @@ function queryAPI(endpoint) {
   const key = `${protocol}-${name}`;
 
   if (!weakMap.has(key)) {
-    weakMap.set(key, 0);
+    weakMap.set(key, 1);
   }
 
   const queryCount = weakMap.get(key);
   weakMap.set(key, queryCount + 1);
 
-  if (queryCount >= 4) {
+  if (queryCount >= 5) {
     throw new Error('Endpoint load is high');
   }
 }

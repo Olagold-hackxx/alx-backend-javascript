@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true
+  },
+  "include": ["./js/**/*.ts"],
+  "files": [
+    "./js/main.ts",
+    "./js/subjects/Teacher.ts",
+    "./js/subjects/Subject.ts",
+    "./js/subjects/Cpp.ts",
+    "./js/subjects/React.ts",
+    "./js/subjects/Java.ts"
+  ]
+}
